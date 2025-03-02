@@ -1,6 +1,5 @@
-pragma Profile (Ravenscar);
-pragma Task_Dispatching_Policy (FIFO_Within_Priorities);
-pragma Locking_Policy (Ceiling_Locking);
+-- stm32f429_command.adb (Use the task)
+with Tasks;
 
 procedure Stm32f429_Command is
 begin
