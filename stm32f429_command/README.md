@@ -492,26 +492,17 @@ A **toolchain** is a collection of tools used to **compile, assemble, and link**
 
 ---
 
-### **Types of Toolchains**
-- **Native Toolchain**: Compiles code for the same system you're developing on (e.g., compiling for macOS on a Mac).
-- **Cross-Toolchain**: Compiles code for a different system (e.g., compiling Ada/C for an STM32 microcontroller on a Mac).
+Toolchain **GNAT ARM ELF** (`gnat_arm_elf`) is a **cross-toolchain** because:
 
-Your toolchain **GNAT ARM ELF** (`gnat_arm_elf`) is a **cross-toolchain** because:
-✅ It runs on **Mac**  
-✅ It produces code for **STM32 (ARM Cortex-M4)**  
+It produces code for **STM32 (ARM Cortex-M4)**  
 
 ---
 
-### **Why Does the Toolchain Matter?**
-1. **Different Versions Can Behave Differently**  
-   - GNAT 12.2.1 **works**, but GNAT 13.1.0 **fails** in your case.
-   - This might be due to **runtime compatibility** or **compiler flags**.
-
-2. **Not All Toolchains Support Embedded Targets**  
+1. **Not All Toolchains Support Embedded Targets**  
    - GNAT **native** is for desktops.  
    - GNAT **ARM ELF** is for embedded microcontrollers.  
 
-3. **Correct Runtime & Libraries Must Match the Toolchain**  
+2. **Correct Runtime & Libraries Must Match the Toolchain**  
    - `embedded-stm32f4` might work in **12.2.1**, but not in **13.1.0**.
 
 ---
