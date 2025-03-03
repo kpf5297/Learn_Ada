@@ -7,4 +7,5 @@ with Ada.Real_Time; use Ada.Real_Time;
 with STM32.Board; use STM32.Board;
 package Tasks is
    task Simple_Task with Priority => 10; -- Library-level task declaration
+   task Another_Task with Priority => 15; -- New task declaration
 end Tasks;
