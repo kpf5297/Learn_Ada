@@ -8,9 +8,10 @@ with HAL.UART;
 with Ada.Real_Time;
 with System;
 with Ada.Strings.Fixed; use Ada.Strings.Fixed;
+with Config;
 
 package Coms_Uart is
-   task UART_Task with Priority => 20;
+   task UART_Task with Priority => Config.UART_Task_Priority;
 
    Exit_Flag : Boolean := False;
 
